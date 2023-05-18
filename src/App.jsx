@@ -5,10 +5,11 @@ import Intro from "./components/Intro";
 import Portfolio from "./components/Portfolio";
 import Timeline from "./components/Timeline";
 import Footer from "./components/Footer";
+import Socials from "./components/Socials";
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-      console.log(entry);
+      // console.log(entry);
       if (entry.isIntersecting) {
           entry.target.classList.add('show');
       } else {
@@ -36,8 +37,10 @@ function App() {
   useEffect(() => {
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
+      document.querySelector("body").classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
+      document.querySelector("body").classList.remove("dark");
     }
   }, [theme]);
 
@@ -95,6 +98,7 @@ function App() {
           <Portfolio />
           <Timeline />
           <Contact />
+          <Socials />
           <Footer />
         </div>
       </div>
