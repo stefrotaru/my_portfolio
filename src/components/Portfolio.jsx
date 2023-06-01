@@ -6,20 +6,22 @@ import Title from "./Title";
 function Portfolio() {
   return (
     <>
-      <Title className="text-center">Projects</Title>
-      <div className="flex flex-col md:flex-row items-center justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {portfolio.map((project) => (
-            <PortfolioItem
-              key={Math.random()}
-              imgUrl={project.imgUrl}
-              title={project.title}
-              stack={project.stack}
-              link={project.link}
-              shortDescription={project.shortDescription}
-              longDescription={project.longDescription}
-            />
-          ))}
+      <div className="portfolio pb-20">
+        <Title className="text-center">Projects</Title>
+        <div className="flex flex-col md:flex-row items-center justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {portfolio.map((project) => (
+              <PortfolioItem
+                key={Math.random()}
+                imgUrl={project.imgUrl}
+                title={project.title}
+                stack={project.stack}
+                link={project.link}
+                shortDescription={project.shortDescription}
+                longDescription={project.longDescription}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </>

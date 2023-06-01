@@ -5,10 +5,11 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        inter: ['inter', 'serif'],
-      }
+        montserrat: ['montserrat', 'serif'],
+      },
     },
   },
   plugins: [],
 }
 
+// background darkmode linear-gradient(176deg,rgb(18,24,27) 50%,rgb(25,33,49) 100%)

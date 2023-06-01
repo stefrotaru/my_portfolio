@@ -6,6 +6,7 @@ import Portfolio from "./components/Portfolio";
 import Timeline from "./components/Timeline";
 import Footer from "./components/Footer";
 import Socials from "./components/Socials";
+import ToolsStack from "./components/ToolsStack";
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -22,6 +23,7 @@ function App() {
   const [theme, setTheme] = useState(null);
   const ref = useRef();
 
+  // dark-light theme handlers
   useEffect(() => {
     if (window.matchMedia("(prefers-color-scheme: dark").matches) {
       setTheme("dark");
@@ -44,6 +46,7 @@ function App() {
     }
   }, [theme]);
 
+  // intersection observers
   useEffect(() => {
     const hiddenElements = ref.current.querySelectorAll('.hide');
     hiddenElements.forEach((el) => observer.observe(el));
@@ -88,14 +91,15 @@ function App() {
       <button
         type="button"
         onClick={handleThemeSwitch}
-        className="fixed p-2 z-10 right-20 top-4 p-1 bg-violet-300 rounded-md dark:bg-orange-300 transition-colors duration-700 ease-in-out" // 
+        className="fixed p-2 z-10 right-5 md:right-10 lg:right-20 top-4 p-1 bg-violet-300 rounded-md dark:bg-orange-300 transition-colors duration-700 ease-in-out"
       >
         {theme === "dark" ? sun : moon}
       </button>
       <div className="bg-white dark:bg-stone-900 transition-colors duration-700 ease-in-out text-stone-900 dark:text-stone-300 min-h-screen font-inter">
         <div ref={ref} className="max-w-5xl w-11/12 mx-auto">
-          <Intro />
+          <Intro theme={theme}/>
           <Portfolio />
+          <ToolsStack/>
           <Timeline />
           <Contact />
           <Socials />
@@ -107,3 +111,10 @@ function App() {
 }
 
 export default App;
+
+
+// dark   bg-[conic-gradient(at_bottom_right,_var(--tw-gradient-stops))] from-gray-700 via-gray-900 to-black
+//        bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-slate-900 via-black to-slate-900
+
+
+// light  bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-indigo-200 via-slate-600 to-indigo-200
