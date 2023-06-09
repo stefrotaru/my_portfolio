@@ -1,20 +1,20 @@
 /* eslint-disable react/prop-types */
 
-import { ReactComponent as HtmlLogo } from "../assets/html-5-svgrepo-com.svg";
-import { ReactComponent as CssLogo } from "../assets/css-3-svgrepo-com.svg";
-import { ReactComponent as JsLogo } from "../assets/js-svgrepo-com.svg";
-import { ReactComponent as JqueryLogo } from "../assets/jquery-svgrepo-com.svg";
-import { ReactComponent as ReactLogo } from "../assets/react.svg";
-import { ReactComponent as VueLogo } from "../assets/vue-vuejs-javascript-js-framework-svgrepo-com.svg";
-import { ReactComponent as TsLogo } from "../assets/typescript-icon-svgrepo-com.svg";
-import { ReactComponent as TailwindLogo } from "../assets/tailwind-svgrepo-com.svg";
-import { ReactComponent as SassLogo } from "../assets/sass-svgrepo-com.svg";
-import { ReactComponent as LessLogo } from "../assets/less-svgrepo-com.svg";
-import { ReactComponent as BootstrapLogo } from "../assets/bootstrap-svgrepo-com.svg";
-import { ReactComponent as NodeLogo } from "../assets/node-js-svgrepo-com.svg";
-import { ReactComponent as FigmaLogo } from "../assets/figma-svgrepo-com.svg";
-import { ReactComponent as PostmanLogo } from "../assets/postman-icon-svgrepo-com.svg";
-import { ReactComponent as JiraLogo } from "../assets/jira-svgrepo-com.svg";
+import { ReactComponent as HtmlLogo } from "../assets/icons/html-5-svgrepo-com.svg";
+import { ReactComponent as CssLogo } from "../assets/icons/css-3-svgrepo-com.svg";
+import { ReactComponent as JsLogo } from "../assets/icons/js-svgrepo-com.svg";
+import { ReactComponent as JqueryLogo } from "../assets/icons/jquery-svgrepo-com.svg";
+import { ReactComponent as ReactLogo } from "../assets/icons/react.svg";
+import { ReactComponent as VueLogo } from "../assets/icons/vue-vuejs-javascript-js-framework-svgrepo-com.svg";
+// import { ReactComponent as TsLogo } from "../assets/icons/typescript-icon-svgrepo-com.svg";
+import { ReactComponent as TailwindLogo } from "../assets/icons/tailwind-svgrepo-com.svg";
+import { ReactComponent as SassLogo } from "../assets/icons/sass-svgrepo-com.svg";
+import { ReactComponent as LessLogo } from "../assets/icons/less-svgrepo-com.svg";
+import { ReactComponent as BootstrapLogo } from "../assets/icons/bootstrap-svgrepo-com.svg";
+import { ReactComponent as NodeLogo } from "../assets/icons/node-js-svgrepo-com.svg";
+import { ReactComponent as FigmaLogo } from "../assets/icons/figma-svgrepo-com.svg";
+import { ReactComponent as PostmanLogo } from "../assets/icons/postman-icon-svgrepo-com.svg";
+import { ReactComponent as JiraLogo } from "../assets/icons/jira-svgrepo-com.svg";
 
 function ToolsStack() {
   return (
@@ -29,7 +29,7 @@ function ToolsStack() {
           <JqueryLogo className="icon" />
           <ReactLogo className="icon" />
           <VueLogo className="icon" />
-          <TsLogo className="icon" />
+          {/* <TsLogo className="icon" /> */}
           <TailwindLogo className="icon" />
           <SassLogo className="icon" />
           <LessLogo className="icon" />
@@ -38,7 +38,7 @@ function ToolsStack() {
       </div>
 
       <div className="software-and-other hide">
-        <h2 className="pb-5 font-bold text-xl">Software and others</h2>
+        <h2 className="pb-5 font-bold text-xl">Software and other</h2>
         <div className="flex gap-5 place-content-center flex-wrap">
           <NodeLogo className="icon" />
           <FigmaLogo className="icon" />

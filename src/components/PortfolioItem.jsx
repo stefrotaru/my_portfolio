@@ -3,12 +3,12 @@
 
 function PortfolioItem({ title, imgUrl, stack, link, shortDescription }) {
   return (
-    <div className="portfolio-item-wrapper grid">
+    <div className="portfolio-item-wrapper grid drop-shadow-lg dark:drop-shadow-lg">
       <div
         target="_blank"
         rel="noopener noreferrer"
         id="appear-l-r"
-        className="border-2 border-stone-900 dark:border-white rounded-md overflow-hidden portfolio-item hide"
+        className="border-2 dark:border-zinc-500 rounded-md overflow-hidden portfolio-item hide"
       >
         <a href={link}>
           <img
@@ -24,7 +24,7 @@ function PortfolioItem({ title, imgUrl, stack, link, shortDescription }) {
           <div className="flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-sm dark:text-zinc-300">
             {stack.map((item) => (
               <span
-                className="inline-block px-2 py-1 font-semibold border-2 border-stone-900 dark:border-white rounded-md"
+                className="inline-block px-2 py-1 font-semibold border-2 border-stone-300 dark:border-zinc-600 rounded-md"
                 key={Math.random()}
               >
                 {item}

@@ -7,6 +7,10 @@ import Timeline from "./components/Timeline";
 import Footer from "./components/Footer";
 import Socials from "./components/Socials";
 import ToolsStack from "./components/ToolsStack";
+import AboutMe from "./components/AboutMe";
+
+import {ReactComponent as DecorationCommentStart} from "./assets/code-svgrepo-com.svg";
+import {ReactComponent as DecorationCommentEnd} from "./assets/code-slash-svgrepo-com.svg";
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -86,24 +90,35 @@ function App() {
     </svg>
   );
 
+  const decorativeCommentColor = () => {
+    if (theme === "dark") {
+      return "#fdba74";
+    } else {
+      return "#c4b5fd";
+    }
+  }
+
   return (
     <>
       <button
         type="button"
         onClick={handleThemeSwitch}
-        className="fixed p-2 z-10 right-5 md:right-10 lg:right-20 top-4 p-1 bg-violet-300 rounded-md dark:bg-orange-300 transition-colors duration-700 ease-in-out"
+        className="absolute p-[0.225rem] md:p-2 right-5 md:right-8 top-6 md:top-7 z-10 bg-violet-300 rounded-md dark:bg-orange-300 transition-colors duration-700 ease-in-out"
       >
         {theme === "dark" ? sun : moon}
       </button>
-      <div className="bg-white dark:bg-stone-900 transition-colors duration-700 ease-in-out text-stone-900 dark:text-stone-300 min-h-screen font-inter">
+      <div className="relative bg-white dark:bg-stone-900 transition-colors duration-700 ease-in-out text-stone-900 dark:text-stone-300 min-h-screen font-inter">
         <div ref={ref} className="max-w-5xl w-11/12 mx-auto">
           <Intro theme={theme}/>
           <Portfolio />
-          <ToolsStack/>
           <Timeline />
+          <AboutMe />
+          <ToolsStack/>
           <Contact />
           <Socials />
           <Footer />
+          <DecorationCommentStart fill={decorativeCommentColor()} className="absolute h-10 md:h-16 top-4 left-4"/>
+          <DecorationCommentEnd fill={decorativeCommentColor()} className="absolute h-10 md:h-16 bottom-4 right-4"/>
         </div>
       </div>
     </>
