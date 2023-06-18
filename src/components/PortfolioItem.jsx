@@ -5,12 +5,10 @@ function PortfolioItem({ title, imgUrl, stack, link, shortDescription }) {
   return (
     <div className="portfolio-item-wrapper grid drop-shadow-lg dark:drop-shadow-lg">
       <div
-        target="_blank"
-        rel="noopener noreferrer"
         id="appear-l-r"
         className="border-2 dark:border-zinc-500 rounded-md overflow-hidden portfolio-item hide"
       >
-        <a href={link}>
+        <a href={link} target="_blank" rel="noreferrer">
           <img
             src={imgUrl}
             alt="portfolio-img"

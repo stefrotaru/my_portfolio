@@ -2,6 +2,7 @@
 // import React from "react";
 
 import { ReactComponent as Arrow } from "../assets/arrow-down-svgrepo-com.svg";
+import Typewriter from "react-ts-typewriter";
 
 function Intro(props) {
   const theme = props.theme;
@@ -25,11 +26,14 @@ function Intro(props) {
           Front End Developer
         </p>
 
-        <p className="text-md md:text-xl max-w-xl mb-6 font-bold hide">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus
-          nemo pariatur dolorum! Provident perferendis, id corrupti earum
-          voluptate quaerat, debitis consectetur!
+        {/* <p className="text-md md:text-xl max-w-xl mb-6 font-bold hide">
+        I strive to create modern user interfaces through hard work, endless curiosity and continuous learning. Let&apos;s shape the future of UI together. Explore my work and experience exceptional user experiences.
+        </p> */}
+
+        <p className="text-md md:text-xl max-w-xl mb-6 font-bold h-20">
+          <Typewriter text="I strive to create modern user interfaces through hard work, endless curiosity and continuous learning. Let's shape the future of UI together." cursor={false} />
         </p>
+
         {/* <a
           href=""
           target="_blank"
