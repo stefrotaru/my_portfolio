@@ -37,7 +37,7 @@ function Contact() {
             placeholder="Name"
             value={senderName}
             onChange={nameInputHandler}
-            className="p-2 bg-transparent border-2 rounded-md focus:outline-none"
+            className="p-2 bg-transparent border-2 dark:border-zinc-500 rounded-md focus:outline-none"
           />
           <input
             type="text"
@@ -45,7 +45,7 @@ function Contact() {
             placeholder="Email"
             value={senderEmail}
             onChange={emailInputHandler}
-            className="my-2 p-2 bg-transparent border-2 rounded-md focus:outline-none"
+            className="my-2 p-2 bg-transparent border-2 dark:border-zinc-500 rounded-md focus:outline-none"
           />
           <textarea
             name="message"
@@ -53,7 +53,7 @@ function Contact() {
             rows="10"
             value={senderMessage}
             onChange={messageInputHandler}
-            className="p-2 mb-4 bg-transparent border-2 rounded-md focus:outline-none"
+            className="p-2 mb-4 bg-transparent border-2 dark:border-zinc-500 rounded-md focus:outline-none"
           />
           <button
             type="submit"

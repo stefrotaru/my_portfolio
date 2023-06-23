@@ -31,7 +31,7 @@ function Intro(props) {
         </p> */}
 
         <p className="text-md md:text-xl max-w-xl mb-6 font-bold h-20">
-          <Typewriter text="I strive to create modern user interfaces through hard work, endless curiosity and continuous learning. Let's shape the future of UI together." cursor={false} />
+          <Typewriter text="I strive to create modern user interfaces through hard work, endless curiosity and continuous learning." cursor={false} />
         </p>
 
         {/* <a

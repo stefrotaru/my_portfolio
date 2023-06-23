@@ -15,10 +15,11 @@ import { ReactComponent as NodeLogo } from "../assets/icons/node-js-svgrepo-com.
 import { ReactComponent as FigmaLogo } from "../assets/icons/figma-svgrepo-com.svg";
 import { ReactComponent as PostmanLogo } from "../assets/icons/postman-icon-svgrepo-com.svg";
 import { ReactComponent as JiraLogo } from "../assets/icons/jira-svgrepo-com.svg";
+import { ReactComponent as VScode } from "../assets/icons/vs-code-svgrepo-com.svg";
 
 function ToolsStack() {
   return (
-    <div className="tool_stack grid place-content-center text-center gap-10 my-20">
+    <div className="tool_stack grid place-content-center text-center gap-10 my-32">
 
       <div className="langs-and-libs hide">
         <h2 className="pb-5 font-bold text-xl">Languages and libraries</h2>
@@ -40,6 +41,7 @@ function ToolsStack() {
       <div className="software-and-other hide">
         <h2 className="pb-5 font-bold text-xl">Software and other</h2>
         <div className="flex gap-5 place-content-center flex-wrap">
+          <VScode className="icon" />
           <NodeLogo className="icon" />
           <FigmaLogo className="icon" />
           <PostmanLogo className="icon" />
