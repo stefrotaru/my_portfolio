@@ -22,7 +22,7 @@ function ToolsStack() {
     <div className="tool_stack grid place-content-center text-center gap-10 my-32">
 
       <div className="langs-and-libs hide">
-        <h2 className="pb-5 font-bold text-xl">Languages and libraries</h2>
+        <h2 className="title pb-5 font-bold text-xl">Languages and libraries</h2>
         <div className="flex gap-5 place-content-center flex-wrap">
           <HtmlLogo className="icon" />
           <CssLogo className="icon" />
@@ -39,7 +39,7 @@ function ToolsStack() {
       </div>
 
       <div className="software-and-other hide">
-        <h2 className="pb-5 font-bold text-xl">Software and other</h2>
+        <h2 className="title pb-5 font-bold text-xl">Software and other</h2>
         <div className="flex gap-5 place-content-center flex-wrap">
           <VScode className="icon" />
           <NodeLogo className="icon" />

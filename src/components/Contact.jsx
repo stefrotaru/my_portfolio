@@ -58,9 +58,9 @@ function Contact() {
           <button
             type="submit"
             onClick={resetFormHandler}
-            className="flex self-center text-center px-8 py-3 w-max text-base font-medium rounded-md text-zinc-100 bg-gradient-to-r from-violet-400 to-indigo-600 dark:from-orange-300 dark:to-red-500 shadow-lg hover:shadow-indigo-500/60 dark:hover:shadow-orange-500/60 transition-colors duration-700 ease-in-out"
+            className="flex self-center text-center px-8 py-3 w-max text-base font-medium rounded-md text-zinc-100 bg-gradient-to-r from-violet-400 to-indigo-600 dark:from-orange-300 dark:to-red-500 shadow-lg hover:shadow-indigo-500/60 dark:hover:shadow-orange-500/60 transition-colors duration-700 ease-in-out hide"
           >
-            Hire me
+            Get in touch
           </button>
         </form>
       </div>

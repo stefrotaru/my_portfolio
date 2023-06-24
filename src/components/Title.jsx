@@ -11,7 +11,7 @@ function Title({ children, id }) {
 
     <h1
       id={id && id}
-      className="text-2xl md:text-3xl font-bold mb-8 text-stone-900 dark:text-zinc-300 hide text-center py-5"
+      className="title text-2xl md:text-3xl font-bold mb-8 text-stone-900 dark:text-zinc-300 hide text-center py-5"
     >
       {children}
     </h1>
