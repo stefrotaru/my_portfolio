@@ -11,6 +11,7 @@ import AboutMe from "./components/AboutMe";
 
 import {ReactComponent as DecorationCommentStart} from "./assets/code-svgrepo-com.svg";
 import {ReactComponent as DecorationCommentEnd} from "./assets/code-slash-svgrepo-com.svg";
+import NiceModal from '@ebay/nice-modal-react';
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -100,6 +101,8 @@ function App() {
 
   return (
     <>
+    <NiceModal.Provider>
+
       <button
         type="button"
         onClick={handleThemeSwitch}
@@ -121,6 +124,7 @@ function App() {
           <DecorationCommentEnd fill={decorativeCommentColor()} className="absolute h-10 md:h-16 bottom-4 right-4"/>
         </div>
       </div>
+    </NiceModal.Provider>
     </>
   );
 }

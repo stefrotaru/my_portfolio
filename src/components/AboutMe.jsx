@@ -14,13 +14,13 @@ function AboutMe() {
           className="h-44 md:h-auto rounded-full float-left mr-5 mb-2 col-span-1"
         />
         <div className="col-span-2 text-xs md:text-base">
-          <p className="font-normal text-stone-500 dark:text-zinc-400">
+          <p className="font-normal text-stone-500 dark:text-zinc-400 text-justify">
             {data.text_part_1}
           </p>
-          <p className="font-normal text-stone-500 dark:text-zinc-400 py-3">
+          <p className="font-normal text-stone-500 dark:text-zinc-400 py-3 text-justify">
             {data.text_part_2}
           </p>
-          <p className="font-normal text-stone-500 dark:text-zinc-400 py-3">
+          <p className="font-normal text-stone-500 dark:text-zinc-400 py-3 text-justify">
             {data.text_part_3}
           </p>
           <div className="flex items-center">

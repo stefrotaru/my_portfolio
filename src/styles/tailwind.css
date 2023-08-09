@@ -46,6 +46,12 @@
   .social:nth-child(3) {
     transition-delay: 700ms;
   }
+  .social:nth-child(4) {
+    /*leetcode icon*/
+    transition-delay: 900ms;
+    height: 42px;
+    width: 42px;
+  }
 
   body::-webkit-scrollbar {
     width: 0.8em;

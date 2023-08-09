@@ -14,10 +14,9 @@ export default [
       link: 'https://www.frontendmentor.io/profile/stefrotaru', 
       img: 'src/assets/icons/frontendmentor-logo.svg'
     },
-    // {
-    //   title: 'Discord',
-    //   link: 'https://discord.com', 
-    //   img: 'src/assets/icons/icons8-discord.svg'
-    // },
-    
+    {
+      title: 'Leetcode',
+      link: 'https://leetcode.com/stefrotaru/', 
+      img: 'src/assets/icons/leetcode.png'
+    }, 
 ]
