@@ -1,7 +1,7 @@
 export default [
     // {
     //     title: 'Project 1',
-    //     imgUrl: 'src/assets/unsplash-macbook.jpg',
+    //     imgUrl: './unsplash-macbook.jpg',
     //     stack: ['HTML', 'CSS','React.js','Vite' ,'Tailwind'],
     //     link: 'https://google.com/',
     //     shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisi nulla, iaculis vitae magna eu, porta semper dolor. Pellentesque iaculis ',
@@ -9,7 +9,7 @@ export default [
     // },
     // {
     //     title: 'Project 2',
-    //     imgUrl: 'src/assets/unsplash-macbook.jpg',
+    //     imgUrl: './unsplash-macbook.jpg',
     //     stack: ['HTML', 'CSS','React.js','Vite' ,'Tailwind'],
     //     link: 'https://google.com/',
     //     shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisi nulla, iaculis vitae magna eu, porta semper dolor. Pellentesque iaculis malesuada tortor, ut bibendum dolor semper quis, ut bibendum dolor semper quis.',
@@ -17,7 +17,7 @@ export default [
     // },
     // {
     //     title: 'Project 3',
-    //     imgUrl: 'src/assets/unsplash-macbook.jpg',
+    //     imgUrl: './unsplash-macbook.jpg',
     //     stack: ['HTML', 'CSS','React.js','Vite' ,'Tailwind'],
     //     link: 'https://google.com/',
     //     shortDescription: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nisi nulla, iaculis vitae magna eu, porta semper dolor. Pellentesque iaculis malesuada tortor!',
@@ -25,16 +25,16 @@ export default [
     // },
     {
         title: 'Front End Developer Portfolio',
-        imgUrl: 'src/assets/front-end-dev-portfolio-preview.png',
+        imgUrl: './front-end-dev-portfolio-preview.png',
         stack: ['HTML', 'CSS','React.js','Vite' ,'Tailwind'],
-        link: 'https://stefrotaru.github.io/react_minimal_portfolio/',
+        link: 'https://stefrotaru.github.io/',
         shortDescription: 'My very first personal Portfolio Website',
         longDescription: 'Lalalalala nanananana',
-        repo: 'https://github.com/stefrotaru/react_minimal_portfolio'
+        repo: 'https://github.com/stefrotaru'
     },
     {
         title: 'Video Games E-Comm (dummy) Website',
-        imgUrl: 'src/assets/unsplash-macbook.png',
+        imgUrl: './unsplash-macbook.png',
         stack: ['HTML', 'CSS','React.js','Vite'],
         link: 'https://stefrotaru.github.io//',
         shortDescription: 'Work in progress!',

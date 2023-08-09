@@ -16,7 +16,7 @@ function PortfolioItem({
         className="flex flex-col justify-between border-2 dark:border-zinc-500 rounded-md overflow-hidden portfolio-item hide"
       >
         <div>
-          <div className="h-2/3">
+          <div className="">
             <a href={link} target="_blank" rel="noreferrer">
               <img
                 src={imgUrl}
