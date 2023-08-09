@@ -1,21 +1,14 @@
 /* eslint-disable react/prop-types */
 // import React from 'react';
 
-import PortfolioItemModal from "./PortfolioItemModal";
-import NiceModal from "@ebay/nice-modal-react";
-
 function PortfolioItem({
   title,
   imgUrl,
   stack,
   link,
   shortDescription,
-  longDescription,
+  repo
 }) {
-  const showPortfolioItemModal = () => {
-    NiceModal.show(PortfolioItemModal, { title, longDescription });
-  };
-
   return (
     <div className="portfolio-item-wrapper grid drop-shadow-lg dark:drop-shadow-lg">
       <div
@@ -23,7 +16,7 @@ function PortfolioItem({
         className="flex flex-col justify-between border-2 dark:border-zinc-500 rounded-md overflow-hidden portfolio-item hide"
       >
         <div>
-          <div className="">
+          <div className="h-2/3">
             <a href={link} target="_blank" rel="noreferrer">
               <img
                 src={imgUrl}
@@ -47,14 +40,11 @@ function PortfolioItem({
               ))}
             </div>
             <p className="py-2">{shortDescription}</p>
+            <a href={repo} target="_blank" rel="noreferrer" className="underline py-4">
+            Github Repository
+            </a>
           </div>
         </div>
-        <button
-          className="self-center border-2 border-none mb-4"
-          onClick={showPortfolioItemModal}
-        >
-          Read more
-        </button>
       </div>
     </div>
   );

@@ -19,6 +19,7 @@ function Portfolio() {
                 link={project.link}
                 shortDescription={project.shortDescription}
                 longDescription={project.longDescription}
+                repo={project.repo}
               />
             ))}
           </div>
