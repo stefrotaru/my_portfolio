@@ -1,5 +1,5 @@
 # react_minimal_portfolio
 
-npm run dev
+npm run dev to run locally
 
-for prod build I should move assets into /public
+npm run deploy to deploy to github pages
