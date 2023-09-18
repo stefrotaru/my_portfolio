@@ -7,7 +7,7 @@ import Typewriter from "react-ts-typewriter";
 function Intro(props) {
   const theme = props.theme;
 
-  const arrowCol = () => {
+  const arrowColor = () => {
     if (theme === "dark") {
       return "#fdba74";
     } else {
@@ -15,8 +15,15 @@ function Intro(props) {
     }
   };
 
+  const scrollDown = () => {
+    console.log()
+    document.querySelector(".about-section").scrollIntoView({
+      behavior: "smooth",
+    });
+  }
+
   return (
-    <div className="intro-section min-h-screen flex items-center justify-center flex-col text-center pt-44 pb-6">
+    <div className="intro-section min-h-screen flex items-center justify-center flex-col gap-20 text-center pt-44 pb-6">
       <div className="intro-text flex flex-col place-content-center">
         <h1 className="title text-4xl md:text-7xl dark:text-zinc-300 mb-1 md:mb-3 font-bold hide">
           Hey, I&apos;m Stefan
@@ -33,25 +40,17 @@ function Intro(props) {
         <p className="text-md md:text-xl max-w-xl mb-6 font-bold h-20">
           <Typewriter text="I strive to create modern user interfaces through hard work, endless curiosity and continuous learning." cursor={false} />
         </p>
-
-        {/* <a
-          href=""
-          target="_blank"
-          className="text-cyan-600 hover:underline underline-offset-2 decoration-2 decoration-red-600"
-          rel="noreferrer noopener"
-        >
-          More about me
-        </a> */}
+        
       </div>
-      <ul className="scroll-down-ul">
+      <ul className="scroll-down-ul cursor-pointer ma-10" onClick={scrollDown}>
         <li>
-          <Arrow fill={arrowCol()} className="imgm1 h-8 md:h-12 " />
+          <Arrow fill={arrowColor()} className="imgm1 h-8 md:h-12 " />
         </li>
         <li>
-          <Arrow fill={arrowCol()} className="imgm2 h-8 md:h-12 " />
+          <Arrow fill={arrowColor()} className="imgm2 h-8 md:h-12 " />
         </li>
         <li>
-          <Arrow fill={arrowCol()} className="imgm3 h-8 md:h-12 " />
+          <Arrow fill={arrowColor()} className="imgm3 h-8 md:h-12 " />
         </li>
       </ul>
     </div>

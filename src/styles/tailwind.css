@@ -14,8 +14,6 @@
 
   .hide {
     opacity: 0;
-    /* filter: blur(5px);
-    transform: translateX(-60%); */
     transition: all 1.5s;
   }
 
@@ -57,9 +55,10 @@
     width: 0.8em;
   }
 
-  body::-webkit-scrollbar-track {
-    /* background-color: rgb(28 25 23); */
-  }
+  /* body::-webkit-scrollbar-track {
+    background-color: rgb(28 25 23);
+  } */
+
   body.dark::-webkit-scrollbar-track {
     background-color: rgb(28 25 23);
   }
@@ -67,12 +66,6 @@
   body::-webkit-scrollbar-thumb {
     background-color: rgb(63, 63, 63);
     border-radius: 5px;
-  }
-
-  .tool_stack {
-  }
-
-  .langs-and-libs {
   }
 
   .icon {
@@ -96,13 +89,16 @@
   }
   .imgm1 {
     opacity: 80%;
-    margin-top: 100px;
   }
   .imgm2 {
     animation: opacity1 2s linear infinite;
   }
   .imgm3 {
     animation: opacity2 2s linear infinite;
+  }
+
+  .shake {
+    animation: shake 0.5s ease-in-out;
   }
 
   @keyframes opacity1 {
@@ -132,6 +128,29 @@
   @media (prefers-reduced-motion) {
     .hide {
       transition: none;
+    }
+  }
+
+  @keyframes shake {
+    10%,
+    90% {
+      transform: translate3d(-0.5px, 0, 0) rotate(0.5deg);
+    }
+
+    20%,
+    80% {
+      transform: translate3d(1px, 0, 0) rotate(-1deg);
+    }
+
+    30%,
+    50%,
+    70% {
+      transform: translate3d(-2px, 0, 0) rotate(0.5deg);
+    }
+
+    40%,
+    60% {
+      transform: translate3d(2px, 0, 0) rotate(-0.5deg);
     }
   }
 }
