@@ -182,6 +182,7 @@ function Contact() {
           />
           <button
             type="submit"
+            aria-label="submit form"
             onClick={sendFormHandler}
             className="flex self-center place-content-center py-3 min-w-[50%] sm:min-w-[40%] md:min-w-[30%]  text-base font-medium rounded-md text-zinc-100 bg-gradient-to-r from-violet-400 to-indigo-600 dark:from-orange-300 dark:to-red-500 shadow-lg hover:shadow-indigo-500/60 dark:hover:shadow-orange-500/60 transition-colors duration-700 ease-in-out hide"
           >

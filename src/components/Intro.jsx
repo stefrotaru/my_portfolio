@@ -42,17 +42,17 @@ function Intro(props) {
         </p>
         
       </div>
-      <ul className="scroll-down-ul cursor-pointer ma-10" onClick={scrollDown}>
-        <li>
+      <button aria-label="scroll to About Me section" className="scroll-down-ul cursor-pointer ma-10" onClick={scrollDown} tabIndex="2">
+        <span>
           <Arrow fill={arrowColor()} className="imgm1 h-8 md:h-12 " />
-        </li>
-        <li>
+        </span>
+        <span>
           <Arrow fill={arrowColor()} className="imgm2 h-8 md:h-12 " />
-        </li>
-        <li>
+        </span>
+        <span>
           <Arrow fill={arrowColor()} className="imgm3 h-8 md:h-12 " />
-        </li>
-      </ul>
+        </span>
+      </button>
     </div>
   );
 }

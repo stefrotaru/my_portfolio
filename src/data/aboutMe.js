@@ -1,6 +1,6 @@
 export default {
     img: './me.jpg',
-    cv: './CV_SR_2023.pdf',
+    cv: 'https://www.scribd.com/document/675310764/CV-SR-2023',
     text_part_1: 'Hello! My name is Stefan, and I am a cheerful, ambitious, dedicated, and adaptable person. I have always been passionate about exploring new challenges, which is why I decided to embark on a new career path after working for a while as a bartender in Bucharest and Amsterdam. This is when I discovered the exciting world of web development! I was determined to succeed and began to immerse myself in learning from various resources such as Udemy, MDN Web Docs, Stackoverflow, freecodecamp, and many others. After a lot of hard work and dedication, I finally landed my first job as a Front End Developer, which was an amazing achievement for me.',
     text_part_2: 'During my free time, I enjoy creating apps using modern JavaScript frameworks to challenge myself and to continue learning. I also love playing the guitar, which is a great way to relax and unwind after a long day of work. Additionally, I am an avid video game player and enjoy exploring the many enchanting stories that they offer, while also sharpening my problem-solving skills.',
     text_part_3: 'I believe that my passion, dedication, and adaptability will serve me well in my new career, and I am excited to continue learning and growing in the field of web development.',

@@ -16,6 +16,8 @@ import { ReactComponent as FigmaLogo } from "../assets/figma-svgrepo-com.svg";
 import { ReactComponent as PostmanLogo } from "../assets/postman-icon-svgrepo-com.svg";
 import { ReactComponent as JiraLogo } from "../assets/jira-svgrepo-com.svg";
 import { ReactComponent as VScode } from "../assets/vs-code-svgrepo-com.svg";
+import { ReactComponent as BrowserStack } from "../assets/browserstack-svgrepo-com.svg";
+import { ReactComponent as Firebase } from "../assets/firebase-svgrepo-com.svg";
 
 function ToolsStack() {
   return (
@@ -43,9 +45,11 @@ function ToolsStack() {
         <div className="flex gap-5 place-content-center flex-wrap">
           <VScode className="icon" />
           <NodeLogo className="icon" />
-          <FigmaLogo className="icon" />
           <PostmanLogo className="icon" />
+          <Firebase className="icon" />
           <JiraLogo className="icon" />
+          <FigmaLogo className="icon" />
+          <BrowserStack className="icon" />
         </div>
       </div>
 

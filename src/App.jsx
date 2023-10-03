@@ -105,8 +105,10 @@ function App() {
 
       <button
         type="button"
+        aria-label="theme switcher"
         onClick={handleThemeSwitch}
         className="absolute p-[0.225rem] md:p-2 right-5 md:right-8 top-6 md:top-7 z-10 bg-violet-300 rounded-md dark:bg-orange-300 transition-colors duration-700 ease-in-out"
+        tabIndex={1}
       >
         {theme === "dark" ? sun : moon}
       </button>
