@@ -115,10 +115,10 @@ function App() {
       <div className="relative bg-white dark:bg-stone-900 transition-colors duration-700 ease-in-out text-stone-900 dark:text-stone-300 min-h-screend">
         <div ref={ref} className="max-w-5xl w-10/12 mx-auto ">
           <Intro theme={theme}/>
-          <AboutMe />
-          <Timeline />
-          <Portfolio />
           <ToolsStack/>
+          <AboutMe />
+          <Portfolio />
+          <Timeline />
           <Contact />
           <Socials />
           <Footer />

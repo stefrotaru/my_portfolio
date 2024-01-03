@@ -24,7 +24,7 @@ function ToolsStack() {
     <div className="tool_stack grid place-content-center text-center gap-10 my-32">
 
       <div className="langs-and-libs hide">
-        <h2 className="title pb-5 font-bold text-xl">Languages and libraries</h2>
+        <h2 className="title py-5 font-bold text-xl">Languages and libraries</h2>
         <div className="flex gap-5 place-content-center flex-wrap">
           <HtmlLogo className="icon" />
           <CssLogo className="icon" />

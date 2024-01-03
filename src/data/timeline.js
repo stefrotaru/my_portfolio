@@ -21,8 +21,9 @@ export default [
         details: 'Studying the 2Checkout legacy code base and the tech stack used for building it. Through these 3 months as an intern I: ',
         detailsList: [
             'got used with the daily work flow (daily scrum meetings, refinement meetings, one to one meetings with my manager, etc.);',
-            'studied the required tech stack and the framework;',
-            'passed assessments.'
+            'studied the required tech stack and the internal framework;',
+            'participated in security trainings;',
+            'developed a shopping cart using HTML, CSS (bootstrap), VueJS, VueX and VueRouter.'
         ]
     },
 ]
