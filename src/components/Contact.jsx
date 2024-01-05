@@ -155,6 +155,7 @@ function Contact() {
             type="text"
             name="name"
             placeholder="Name"
+            autoComplete="name"
             value={senderName}
             onChange={nameInputHandler}
             onBlur={removeRedBorderIfFilledOut}
@@ -164,6 +165,7 @@ function Contact() {
             type="text"
             name="email"
             placeholder="Email"
+            autoComplete="email"
             value={senderEmail}
             onChange={emailInputHandler}
             onBlur={

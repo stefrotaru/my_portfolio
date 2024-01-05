@@ -38,7 +38,7 @@ function Intro(props) {
         </p> */}
 
         <p className="text-md md:text-xl max-w-xl mb-6 font-bold h-20">
-          <Typewriter text="I'm a former bartender turned developer who uses years of insights into people's stories to create the most reactive and enjoyable interfaces through hard work, endless curiosity and continuous learning." cursor={false} speed={25}/>
+          <Typewriter text="I'm a former bartender turned developer who uses years of insights into people's stories to create the most reactive and enjoyable interfaces through hard work, endless curiosity and continuous learning." cursor={false} speed={30}/>
         </p>
         
       </div>

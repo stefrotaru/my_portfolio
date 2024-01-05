@@ -15,7 +15,7 @@ function PortfolioItem({ title, imgUrl, stack, link, shortDescription, longDescr
     <div className="portfolio-item-wrapper grid drop-shadow-lg dark:drop-shadow-lg">
       <div
         id="appear-l-r"
-        className="flex flex-col border-2 dark:border-zinc-500 rounded-md overflow-hidden portfolio-item hide"
+        className="flex flex-col min-h-[450px] border-2 dark:border-zinc-500 rounded-md overflow-hidden portfolio-item hide "
       >
         <div>
           <a href={link} target="_blank" rel="noreferrer">

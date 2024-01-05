@@ -50,6 +50,15 @@ export default [
         repo: 'https://github.com/stefrotaru/tip-calculator-app-main'
     },
     {
+        title: 'Expenses React App',
+        imgUrl: './expenses-app-preview.jpg',
+        stack: ['HTML', 'CSS', 'JS', 'React.js'],
+        link: 'https://stefrotaru.github.io/Expenses-react-app/',
+        shortDescription: 'React app that keeps track of your expenses. The main objective of this app was to get used with the useState react hook.',
+        longDescription: '',
+        repo: 'https://github.com/stefrotaru/Expenses-react-app'
+    },
+    {
         title: 'More projects coming soon',
         imgUrl: '',
         stack: [],
