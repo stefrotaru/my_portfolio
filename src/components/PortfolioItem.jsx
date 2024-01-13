@@ -1,9 +1,12 @@
 /* eslint-disable react/prop-types */
-// import React from 'react';
+import { useRef } from 'react';
 
 function PortfolioItem({ title, imgUrl, stack, link, shortDescription, longDescription, repo }) {
+  const buttonRef = useRef(null);
+
   const openModal = () => {
     const modal = document.getElementById(title.replace(/\s/g, "-").toLowerCase() + '-modal');
+    buttonRef.current.blur(); // remove focus from button
     modal.showModal();
   }
   const closeModal = () => {
@@ -43,27 +46,44 @@ function PortfolioItem({ title, imgUrl, stack, link, shortDescription, longDescr
 
           { shortDescription !== '' && <p className="py-2 flex-grow">
                                           {shortDescription}
-                                          {longDescription !== '' && <span onClick={openModal} className="cursor-pointer underline ml-2">Read more!</span>}
+                                          {longDescription !== '' && <button onClick={openModal} ref={buttonRef} className="cursor-pointer underline ml-2">Read more!</button>}
                                        </p>
           }
           
           {longDescription !== '' && 
             <div>
-              <dialog className="modal sm:text-lg w-11/12 sm:w-9/12 md:lg:w-6/12 p-5 rounded-md bg-stone-100 dark:bg-stone-200 shadow-lg outline-none" onClick={closeModal} id={title.replace(/\s/g, "-").toLowerCase() + '-modal'}>
-                <div dangerouslySetInnerHTML={{__html: longDescription}} className="flex flex-col gap-2"></div>
+              <dialog className="modal sm:text-lg w-11/12 sm:w-9/12 lg:w-6/12 2xl:w-4/12 p-5 rounded-md bg-stone-100 dark:bg-stone-200 shadow-lg outline-none" id={title.replace(/\s/g, "-").toLowerCase() + '-modal'}>
+                <button onClick={closeModal} className="focus:outline-none border-2 border-violet-300 dark:border-orange-300 rounded-md p-1 absolute right-5 hover:bg-violet-300 hover:dark:bg-orange-300 text-sm">esc</button>
+                <div className="flex flex-col gap-4">
+                  <h1 className="text-xl font-bold pb-2 pt-1">{longDescription.title}</h1>
+                  {longDescription.content.map((line, i) => {
+                    if (typeof line === 'string') {
+                      return <p key={i}>{line}</p>
+                    } else if (typeof line === 'object') {
+                      return <ul key={i} className="pl-6">
+                              {line.map((item, j) => <li key={j}>{item}</li>)}
+                             </ul>
+                    } else {
+                      return;
+                    }
+                  })}
+                </div>
               </dialog>
             </div>
           }
 
-          <a
-            href={repo !== '' ? repo : link}
-            aria-label={ title + " repository" }
-            target="_blank"
-            rel="noreferrer"
-            className="underline mt-4"
-          >
-            {repo !== '' ? 'Github Repository' : 'Check out my Github profile!'}
-          </a>
+          <div className="mt-4">
+            <a
+              href={repo !== '' ? repo : link}
+              aria-label={ title + " repository" }
+              target="_blank"
+              rel="noreferrer"
+              className="underline"
+            >
+              {repo !== '' ? 'Github Repository' : 'Check out my Github profile!'}
+            </a>
+          </div>
+
         </div>
       </div>
     </div>

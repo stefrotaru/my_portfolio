@@ -31,7 +31,7 @@ function AboutMe() {
                 aria-label="resume"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-indigo-600 dark:from-orange-300 dark:to-red-500 pl-1"
+                className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-indigo-600 dark:from-orange-300 dark:to-red-500 ml-1"
               >
                 RESUME
               </a>

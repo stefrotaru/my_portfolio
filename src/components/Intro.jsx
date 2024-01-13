@@ -33,16 +33,12 @@ function Intro(props) {
           Front End Developer
         </p>
 
-        {/* <p className="text-md md:text-xl max-w-xl mb-6 font-bold hide">
-        I strive to create modern user interfaces through hard work, endless curiosity and continuous learning. Let&apos;s shape the future of UI together. Explore my work and experience exceptional user experiences.
-        </p> */}
-
         <p className="text-md md:text-xl max-w-xl mb-6 font-bold h-20">
           <Typewriter text="I'm a former bartender turned developer who uses years of insights into people's stories to create the most reactive and enjoyable interfaces through hard work, endless curiosity and continuous learning." cursor={false} speed={30}/>
         </p>
         
       </div>
-      <button aria-label="scroll to About Me section" className="scroll-down-ul cursor-pointer ma-10" onClick={scrollDown} tabIndex="2">
+      <button aria-label="scroll to About Me section" className="scroll-down-ul cursor-pointer ma-10" onClick={scrollDown} >
         <span>
           <Arrow fill={arrowColor()} className="imgm1 h-8 md:h-12 " />
         </span>
