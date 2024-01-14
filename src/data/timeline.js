@@ -3,7 +3,10 @@ export default [
         year: 'Today',
         title: 'Front End Developer',
         company: 'Verifone (2checkout)',
-        duration: 'September 2022 - Present',
+        duration: {
+            start: 'September 2022',
+            end: 'Present'
+        },
         details: 'Working day by day on maintaining and developing marketplaces and new versions of the 2Checkout cart.',
         detailsList: [
             'Using an agile approach, with two week sprints; working on both sprint and kanban issues.',
@@ -17,7 +20,10 @@ export default [
         year: '2022',
         title: 'Front End Intern',
         company: 'Verifone (2checkout)',
-        duration: 'June 2022 - September 2022',
+        duration: {
+            start: 'June 2022',
+            end: 'September 2022'
+        },
         details: 'Studying the 2Checkout legacy code base and the tech stack used for building it. Through these 3 months as an intern I: ',
         detailsList: [
             'got used with the daily work flow (daily scrum meetings, refinement meetings, one to one meetings with my manager, etc.);',
