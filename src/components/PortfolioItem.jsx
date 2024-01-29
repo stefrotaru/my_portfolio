@@ -54,8 +54,8 @@ function PortfolioItem({ title, imgUrl, stack, link, shortDescription, longDescr
             <div>
               <dialog className="modal sm:text-lg w-11/12 sm:w-9/12 lg:w-6/12 2xl:w-4/12 p-5 rounded-md bg-stone-100 dark:bg-stone-200 shadow-lg outline-none" id={title.replace(/\s/g, "-").toLowerCase() + '-modal'}>
                 <button onClick={closeModal} className="focus:outline-none border-2 border-violet-300 dark:border-orange-300 rounded-md p-1 absolute right-5 hover:bg-violet-300 hover:dark:bg-orange-300 text-sm">esc</button>
-                <div className="flex flex-col gap-4">
-                  <h1 className="text-xl font-bold pb-2 pt-1">{longDescription.title}</h1>
+                <div className="flex flex-col gap-4 break-words">
+                  <h1 className="text-xl font-bold pb-2 pt-1 w-4/5">{longDescription.title}</h1>
                   {longDescription.content.map((line, i) => {
                     if (typeof line === 'string') {
                       return <p key={i}>{line}</p>

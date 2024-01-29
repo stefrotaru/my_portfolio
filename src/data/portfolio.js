@@ -5,7 +5,23 @@ export default [
         stack: ['HTML', 'CSS','React.js','Vite' ,'Tailwind', 'Firebase'],
         link: 'https://stefanrotaru.eu/',
         shortDescription: 'My very first personal Portfolio Website.',
-        longDescription: '',
+        longDescription: {
+            title: 'Front End Developer Portfolio',
+            content: [
+                'This is my very first personal Portfolio Website which is hosted on my own domain (https://stefanrotaru.eu/).',
+                'This project is built with React.js and Tailwind CSS. It is bundled with Vite and hosted on Firebase.',
+                'My goals with this project were to:',
+                [
+                    '- Build a website that is easy to maintain and update;',
+                    '- Connect a domain (my very own) to Firebase and configure SSL/TLS;',
+                    '- Get used with the Tailwind CSS framework;',
+                    '- Get used with the Firebase hosting service;',
+                    '- Get a great Google Lighthouse score;'
+                ],
+                'The website is fully responsive and it is optimized for mobile devices.',
+                'I\'m very happy with the result and I\'m constantly adding more content to my Portfolio Website, such as new projects and new features.'
+            ]
+        },
         repo: 'https://github.com/stefrotaru/my_portfolio'
     },
     {
@@ -29,6 +45,37 @@ export default [
             ]
         },
         repo: 'https://github.com/stefrotaru/mqtt-chat'
+    },
+    {
+        title: 'Multi Step Form',
+        imgUrl: './react_multi-step-form.webp',
+        stack: ['HTML', 'CSS','React.js', 'Redux', 'Vite' ,'Sass'],
+        link: 'https://stefrotaru.github.io/react-multi_step_form/',
+        shortDescription: 'This is a multi-step form built with React and Redux for a advanced challenge from Frontend Mentor.',
+        longDescription: {
+            title: 'Multi Step Form',
+            content: [
+                'This is a solution to the Multi-step form challenge on Frontend Mentor (https://www.frontendmentor.io/challenges/multistep-form-YVAnSdqQBJ).',
+                'Users should be able to:',
+                [
+                    '- Complete each step of the sequence;',
+                    '- Go back to a previous step to update their selections;',
+                    '- See a summary of their selections on the final step and confirm their order',
+                    '- View the optimal layout for the interface depending on their device\'s screen size',
+                    '- Receive form validation messages if: a field has been missed/the email address is not formatted correctly'
+                ],
+                'With this Front End Mentor challenge I have refreshed my React/Redux knowledge.',
+                'My goals with this project were to:',
+                [
+                    '- Capture the form fields values into a Redux store, composed of multiple slices, each slice with it\'s own scope;',
+                    '- Build a efficient SPA;',
+                    '- Consume json data;',
+                    '- Use as few external libraries as possible;',
+                    '- Practice the BEM methodology wits Scss;'
+                ]
+            ]
+        },
+        repo: 'https://github.com/stefrotaru/react-multi_step_form'
     },
     {
         title: 'Splitter',
