@@ -11,11 +11,9 @@ import AboutMe from "./components/AboutMe";
 
 import {ReactComponent as DecorationCommentStart} from "./assets/code-svgrepo-com.svg";
 import {ReactComponent as DecorationCommentEnd} from "./assets/code-slash-svgrepo-com.svg";
-import NiceModal from '@ebay/nice-modal-react';
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-      // console.log(entry);
       if (entry.isIntersecting) {
           entry.target.classList.add('show');
       } else {
@@ -30,22 +28,33 @@ function App() {
 
   // dark-light theme handlers
   useEffect(() => {
-    if (window.matchMedia("(prefers-color-scheme: dark").matches) {
-      setTheme("dark");
+    if (sessionStorage.getItem("last-theme")) {
+      setTheme(sessionStorage.getItem("last-theme"));
     } else {
-      setTheme("light");
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        setTheme("dark");
+      } else {
+        setTheme("light");
+      }
     }
   }, []);
 
   const handleThemeSwitch = () => {
     setTheme(theme === "dark" ? "light" : "dark");
+    sessionStorage.setItem("last-theme", theme === "dark" ? "light" : "dark");
   };
 
   useEffect(() => {
     if (theme === "dark") {
-      document.documentElement.classList.add("dark");
+      document.documentElement.classList.add(theme);
       document.querySelector("body").classList.add("dark");
+
+      document.documentElement.classList.remove("light");
+      document.querySelector("body").classList.remove("light");
     } else {
+      document.documentElement.classList.add("light");
+      document.querySelector("body").classList.add("light");
+
       document.documentElement.classList.remove("dark");
       document.querySelector("body").classList.remove("dark");
     }
@@ -55,7 +64,6 @@ function App() {
   useEffect(() => {
     const hiddenElements = ref.current.querySelectorAll('.hide');
     hiddenElements.forEach((el) => observer.observe(el));
-    // console.log(hiddenElements)
   }, [ref, theme])
 
   const sun = (
@@ -101,8 +109,6 @@ function App() {
 
   return (
     <>
-    <NiceModal.Provider>
-
       <button
         type="button"
         aria-label="theme switcher"
@@ -125,7 +131,6 @@ function App() {
           <DecorationCommentEnd fill={decorativeCommentColor()} className="absolute h-10 md:h-16 bottom-4 right-4"/>
         </div>
       </div>
-    </NiceModal.Provider>
     </>
   );
 }
