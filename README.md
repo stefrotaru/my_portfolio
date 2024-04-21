@@ -44,7 +44,7 @@ This journey allowed me to not only enhance my technical skills but also gain co
 
 ## Useful resources
 
-[https://vitejs.dev/](https://vitejs.dev/)
-[https://react.dev/](https://react.dev/)
-[https://tailwindcss.com/docs/installation](https://tailwindcss.com/docs/installation)
-[https://firebase.google.com/docs/hosting](https://firebase.google.com/docs/hosting)
+[https://vitejs.dev/](https://vitejs.dev/)\
+[https://react.dev/](https://react.dev/)\
+[https://tailwindcss.com/docs/installation](https://tailwindcss.com/docs/installation)\
+[https://firebase.google.com/docs/hosting](https://firebase.google.com/docs/hosting)\

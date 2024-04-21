@@ -20,19 +20,21 @@ function PortfolioItem({ title, imgUrl, stack, link, shortDescription, longDescr
         id="appear-l-r"
         className="flex flex-col min-h-[450px] border-2 dark:border-zinc-500 rounded-md overflow-hidden portfolio-item hide "
       >
-        <div>
-          <a href={link} target="_blank" rel="noreferrer">
-            {imgUrl !== '' ? <img
-              src={imgUrl}
-              alt="portfolio-img"
-              className="w-full h-auto object-cover cursor-pointer"
-            /> : ''}
-          </a>
-        </div>
+        {imgUrl !== '' ?
+          <div>
+            <a href={link} aria-label={title + " repo"} target="_blank" rel="noreferrer">
+              <img
+                src={imgUrl}
+                alt="portfolio-img"
+                className="w-full h-auto object-cover cursor-pointer"
+              />
+            </a>
+          </div> : ''
+        }
         <div className={imgUrl !== '' ? "w-full p-4 h-full flex flex-col" : 'w-full p-4 h-full flex flex-col justify-center text-center'}>
-          <h3 className="text-lg md:text-xl dark:text-zinc-300 mb-2 md:mb-3 font-semibold">
+          <p className="text-lg md:text-xl dark:text-zinc-300 mb-2 md:mb-3 font-semibold">
             {title}
-          </h3>
+          </p>
           <div className="flex flex-wrap gap-2 flex-row items-center justify-start text-xs md:text-sm dark:text-zinc-300">
             {stack.map((item) => (
               <span
@@ -75,7 +77,7 @@ function PortfolioItem({ title, imgUrl, stack, link, shortDescription, longDescr
           <div className="mt-4">
             <a
               href={repo !== '' ? repo : link}
-              aria-label={ title + " repository" }
+              aria-label={ repo !== '' ? title + ' repository' : 'Github profile'}
               target="_blank"
               rel="noreferrer"
               className="underline"

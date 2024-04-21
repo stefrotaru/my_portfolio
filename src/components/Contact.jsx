@@ -8,9 +8,7 @@ function Contact() {
   const [senderMessage, setSenderMessage] = useState("");
 
   const nameInputHandler = (e) => setSenderName(e.target.value);
-
   const emailInputHandler = (e) => setSenderEmail(e.target.value);
-
   const messageInputHandler = (e) => setSenderMessage(e.target.value);
 
   const isFormFilledOut = () => {
@@ -37,7 +35,6 @@ function Contact() {
     }
   };
 
-  // send form
   const sendFormHandler = (e) => {
     e.preventDefault();
 
@@ -45,9 +42,9 @@ function Contact() {
     const emailField = document.querySelector('input[name="email"]');
     const submitButton = document.querySelector('button[type="submit"]');
 
+    // if form invalid
     if (!isFormValid()) {
-      console.log("form not valid");
-
+      // animate form fields 
       inputFields.forEach((input) => {
         if (input.value === "") {
           input.classList.add("!border-red-500");
