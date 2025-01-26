@@ -8,6 +8,8 @@ import { ReactComponent as ReactLogo } from "../assets/react.svg";
 import { ReactComponent as ReduxLogo } from "../assets/redux-svgrepo-com.svg";
 import { ReactComponent as VueLogo } from "../assets/vue-vuejs-javascript-js-framework-svgrepo-com.svg";
 import { ReactComponent as ViteLogo } from "../assets/vite-svgrepo-com.svg";
+import { ReactComponent as Pinia } from "../assets/pinia.svg";
+import { ReactComponent as Storybook } from "../assets/storybook-icon-svgrepo-com.svg";
 import { ReactComponent as GulpLogo } from "../assets/gulp-svgrepo-com.svg";
 import { ReactComponent as TsLogo } from "../assets/typescript-icon-svgrepo-com.svg";
 import { ReactComponent as TailwindLogo } from "../assets/tailwind-svgrepo-com.svg";
@@ -19,10 +21,9 @@ import { ReactComponent as FigmaLogo } from "../assets/figma-svgrepo-com.svg";
 import { ReactComponent as PostmanLogo } from "../assets/postman-icon-svgrepo-com.svg";
 import { ReactComponent as JiraLogo } from "../assets/jira-svgrepo-com.svg";
 import { ReactComponent as VScode } from "../assets/vs-code-svgrepo-com.svg";
+import { ReactComponent as VisualStudio } from "../assets/visual-studio-svgrepo-com.svg";
 import { ReactComponent as BrowserStack } from "../assets/browserstack-svgrepo-com.svg";
 import { ReactComponent as Firebase } from "../assets/firebase-svgrepo-com.svg";
-import { ReactComponent as Pinia } from "../assets/pinia.svg";
-import { ReactComponent as Storybook } from "../assets/storybook-icon-svgrepo-com.svg";
 
 function ToolsStack() {
   return (
@@ -54,6 +55,7 @@ function ToolsStack() {
         <h2 className="title pb-5 font-bold text-xl">Software and other</h2>
         <div className="flex gap-5 place-content-center flex-wrap">
           <VScode className="icon" />
+          <VisualStudio className="icon" />
           <NodeLogo className="icon" />
           <PostmanLogo className="icon" />
           <Firebase className="icon" />
