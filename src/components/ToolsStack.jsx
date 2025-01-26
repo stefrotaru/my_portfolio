@@ -9,7 +9,7 @@ import { ReactComponent as ReduxLogo } from "../assets/redux-svgrepo-com.svg";
 import { ReactComponent as VueLogo } from "../assets/vue-vuejs-javascript-js-framework-svgrepo-com.svg";
 import { ReactComponent as ViteLogo } from "../assets/vite-svgrepo-com.svg";
 import { ReactComponent as GulpLogo } from "../assets/gulp-svgrepo-com.svg";
-// import { ReactComponent as TsLogo } from "../assets/typescript-icon-svgrepo-com.svg";
+import { ReactComponent as TsLogo } from "../assets/typescript-icon-svgrepo-com.svg";
 import { ReactComponent as TailwindLogo } from "../assets/tailwind-svgrepo-com.svg";
 import { ReactComponent as BootstrapLogo } from "../assets/bootstrap-svgrepo-com.svg";
 import { ReactComponent as LessLogo } from "../assets/less-svgrepo-com.svg";
@@ -21,6 +21,8 @@ import { ReactComponent as JiraLogo } from "../assets/jira-svgrepo-com.svg";
 import { ReactComponent as VScode } from "../assets/vs-code-svgrepo-com.svg";
 import { ReactComponent as BrowserStack } from "../assets/browserstack-svgrepo-com.svg";
 import { ReactComponent as Firebase } from "../assets/firebase-svgrepo-com.svg";
+import { ReactComponent as Pinia } from "../assets/pinia.svg";
+import { ReactComponent as Storybook } from "../assets/storybook-icon-svgrepo-com.svg";
 
 function ToolsStack() {
   return (
@@ -32,13 +34,15 @@ function ToolsStack() {
           <HtmlLogo className="icon" />
           <CssLogo className="icon" />
           <JsLogo className="icon" />
+          <TsLogo className="icon" />
           <JqueryLogo className="icon" />
           <ReactLogo className="icon" />
           <ReduxLogo className="icon" />
-          <VueLogo className="icon" />
           <ViteLogo className="icon" />
+          <VueLogo className="icon" />
+          <Pinia className="icon" />
+          <Storybook className="icon" />
           <GulpLogo className="icon" />
-          {/* <TsLogo className="icon" /> */}
           <TailwindLogo className="icon" />
           <BootstrapLogo className="icon" />
           <LessLogo className="icon" />
