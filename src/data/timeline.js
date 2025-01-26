@@ -2,15 +2,31 @@ export default [
     {
         year: 'Today',
         title: 'Front End Developer',
+        company: 'iFACTS Development',
+        duration: {
+            start: 'April 2024',
+            end: 'Present'
+        },
+        details: 'Maintaining and modernizing the iFACTS web application, focusing on feature development, component migration, and codebase improvements.',
+        detailsList: [
+            'Maintaining product stability through proactive bug fixing, code refactoring and performance improvements.',
+            'Migrating components to Vue3, implementing core components with Storybook integration using TypeScript and Pinia state management.',
+            'Working in an agile environment using Jira kanban board epics and stories to manage tasks, bug fixes, and new feature development.',
+            'Collaborating daily with PO and Consultants, providing implementation demos and maintaining documentation in Confluence.'
+        ]
+    },
+    {
+        year: '2022',
+        title: 'Front End Developer',
         company: 'Verifone (2checkout)',
         duration: {
             start: 'September 2022',
-            end: 'Present'
+            end: 'April 2024'
         },
-        details: 'Working day by day on maintaining and developing marketplaces and new versions of the 2Checkout cart.',
+        details: 'Maintaining and developing marketplaces and new versions of the 2Checkout cart.',
         detailsList: [
             'Using an agile approach, with two week sprints; working on both sprint and kanban issues.',
-            'Using JS libraries and frameworks (jQuery, VueJS), NPM Packages, Gulp, Bower.',
+            'Using JS libraries and frameworks: jQuery, VueJS, Gulp, Bower.',
             'Good understanding of async request handling, partial page updates, and AJAX.',
             'Writing semantic, modular front end code using HTML5, CSS3 (including Flex-box/Grid), SASS/LESS preprocessors and W3C coding practices.',
             'Collaborating on a daily basis with multiple teams (QA, UX, PS, CRO).'
