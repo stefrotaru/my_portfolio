@@ -45,7 +45,7 @@ function TimelineItem({
   return (
     <li className="flex flex-col md:flex-row relative border-1 border-stone-200 dark:border-stone-700 timeline-item hide slide-in">
       <div className="mb-10 ml-4">
-        <div className="absolute w-3 h-3 bg-stone-200 rounded-full mt-1.5  -left-1.5 border border-white dark:border-stone-900 dark:bg-stone-700" />
+        <div className="absolute w-3 h-3 bg-stone-200 rounded-full mt-2 max-lg:mt-2 -left-1.5 border border-white dark:border-stone-900 dark:bg-stone-700" />
         <div className="flex flex-wrap gap-4 flex-row items-center justify-start text-xs md:text-sm">
           <span className="inline-block px-2 py-1 font-semibold text-zinc-300 dark:text-stone-900 dark:bg-zinc-300 bg-stone-900 rounded-md">
             {year}
@@ -53,7 +53,7 @@ function TimelineItem({
           <p className="text-lg font-semibold text-stone-900 dark:text-zinc-300">
             {title}
           </p>
-          <span className="max-lg:w-full my-1 text-sm font-normal leading-none text-stone-400 dark:text-zinc-500">
+          <span className="max-lg:w-full text-sm font-normal leading-none text-stone-400 dark:text-zinc-500">
             <span>
               {duration.start} - {duration.end}
             </span>
