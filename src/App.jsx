@@ -117,7 +117,7 @@ function App() {
       >
         {theme === "dark" ? sun : moon}
       </button>
-      <div className="relative bg-white dark:bg-stone-900 transition-colors duration-700 ease-in-out text-stone-900 dark:text-stone-300 min-h-screend">
+      <div className="relative bg-white dark:bg-stone-900 transition-colors duration-700 ease-in-out text-stone-900 dark:text-stone-300 min-h-screen">
         <div ref={ref} className="max-w-5xl w-10/12 mx-auto ">
           <Intro theme={theme}/>
           <ToolsStack/>
