@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 function PortfolioItem({
   title,
@@ -11,26 +11,54 @@ function PortfolioItem({
   repo,
 }) {
   const buttonRef = useRef(null);
+  const modalRef = useRef(null);
+
+  useEffect(() => {
+    const handleEscape = (e) => {
+      if (e.key === "Escape" && modalRef.current) {
+        closeModal();
+      }
+    };
+    document.addEventListener("keydown", handleEscape);
+    return () => document.removeEventListener("keydown", handleEscape);
+  });
 
   const openModal = () => {
-    const modal = document.getElementById(
-      title.replace(/\s/g, "-").toLowerCase() + "-modal"
-    );
+    const modal = modalRef.current;
     buttonRef.current.blur(); // remove focus from button
+
+    modal.classList.remove("modal-closing");
+    modal.classList.add("modal-opening");
+
     modal.showModal();
+
+    modal.addEventListener("click", handleBackdropClick);
   };
+
   const closeModal = () => {
-    const modal = document.getElementById(
-      title.replace(/\s/g, "-").toLowerCase() + "-modal"
-    );
-    modal.close();
+    const modal = modalRef.current;
+
+    modal.classList.remove("modal-opening");
+    modal.classList.add("modal-closing");
+
+    setTimeout(() => {
+      modal.close();
+      modal.removeEventListener("click", handleBackdropClick);
+    }, 300);
+  };
+
+  const handleBackdropClick = (e) => {
+    const modal = modalRef.current;
+    if (e.target === modal) {
+      closeModal();
+    }
   };
 
   return (
     <div className="portfolio-item-wrapper grid drop-shadow-lg dark:drop-shadow-lg">
       <div
         id="appear-l-r"
-        className="flex flex-col min-h-[450px] border-2 dark:border-zinc-500 rounded-md overflow-hidden portfolio-item hide "
+        className="flex flex-col min-h-[450px] border-2 dark:border-zinc-500 rounded-md overflow-hidden portfolio-item hide"
       >
         {imgUrl !== "" ? (
           <div>
@@ -79,7 +107,7 @@ function PortfolioItem({
                 <button
                   onClick={openModal}
                   ref={buttonRef}
-                  className="cursor-pointer underline flex flex-start mt-2 :hover:text-violet-300 dark:hover:text-orange-300"
+                  className="cursor-pointer underline flex flex-start mt-2 hover:text-violet-300 dark:hover:text-orange-300"
                 >
                   Read more
                 </button>
@@ -90,12 +118,17 @@ function PortfolioItem({
           {longDescription !== "" && (
             <div>
               <dialog
-                className="modal sm:text-lg w-11/12 sm:w-9/12 lg:w-6/12 2xl:w-4/12 p-5 rounded-md bg-stone-100 dark:bg-stone-200 shadow-lg outline-none"
-                id={title.replace(/\s/g, "-").toLowerCase() + "-modal"}
+                ref={modalRef}
+                className="modal sm:text-lg w-11/12 sm:w-9/12 lg:w-6/12 2xl:w-4/12 p-5 rounded-md bg-white dark:bg-stone-900 transition-colors duration-700 ease-in-out text-stone-900 dark:text-stone-300 backdrop:bg-black backdrop:bg-opacity-50 "
+                style={{
+                  transform: "scale(0.9)",
+                  opacity: 0,
+                  transition: "transform 0.3s ease-out, opacity 0.3s ease-out",
+                }}
               >
                 <button
                   onClick={closeModal}
-                  className="focus:outline-none border-2 border-violet-300 dark:border-orange-300 rounded-md p-1 absolute right-5 hover:bg-violet-300 hover:dark:bg-orange-300 text-sm"
+                  className="focus:outline-none border-2 border-violet-300 dark:border-orange-300 rounded-md p-1 absolute right-5 hover:bg-violet-300 hover:dark:bg-orange-300 text-sm hover:text-white dark:hover:text-black"
                 >
                   esc
                 </button>
@@ -114,9 +147,8 @@ function PortfolioItem({
                           ))}
                         </ul>
                       );
-                    } else {
-                      return;
                     }
+                    return null;
                   })}
                 </div>
               </dialog>
@@ -131,7 +163,7 @@ function PortfolioItem({
               }
               target="_blank"
               rel="noreferrer"
-              className="underline :hover:text-violet-300 dark:hover:text-orange-300"
+              className="underline hover:text-violet-300 dark:hover:text-orange-300"
             >
               {repo !== ""
                 ? "Github Repository"
