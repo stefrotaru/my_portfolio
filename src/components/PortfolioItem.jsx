@@ -9,6 +9,7 @@ function PortfolioItem({
   shortDescription,
   longDescription,
   repo,
+  index
 }) {
   const buttonRef = useRef(null);
   const modalRef = useRef(null);
@@ -57,8 +58,9 @@ function PortfolioItem({
   return (
     <div className="portfolio-item-wrapper grid drop-shadow-lg dark:drop-shadow-lg">
       <div
-        id="appear-l-r"
-        className="flex flex-col min-h-[450px] border-2 dark:border-zinc-500 rounded-md overflow-hidden portfolio-item hide"
+        className={`flex flex-col min-h-[450px] border-2 dark:border-zinc-500 rounded-md overflow-hidden portfolio-item hide ${
+          index % 2 === 0 ? 'slide-in' : 'slide-in-right'
+        } delay-${index}`}
       >
         {imgUrl !== "" ? (
           <div>

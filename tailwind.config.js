@@ -63,6 +63,14 @@ export default {
       },
     },
   },
+  safelist: [
+    'delay-0',
+    'delay-1',
+    'delay-2',
+    'delay-3',
+    'delay-4',
+    'delay-5'
+  ],
   plugins: [],
 }
 

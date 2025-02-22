@@ -5,7 +5,7 @@ import data from "../data/aboutMe";
 
 function AboutMe() {
   return (
-    <div className="about-section flex flex-col justify-center my-32">
+    <div className="about-section flex flex-col justify-center my-32 hide">
       <Title>About me</Title>
       <div className="hide md:grid md:grid-cols-3 md:gap-5">
         <img

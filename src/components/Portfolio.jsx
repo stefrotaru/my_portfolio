@@ -10,7 +10,7 @@ function Portfolio() {
         <Title className="text-center">Projects</Title>
         <div className="flex flex-col md:flex-row items-center justify-center">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {portfolio.map((project) => (
+            {portfolio.map((project, index) => (
               <PortfolioItem
                 key={Math.random()}
                 imgUrl={project.imgUrl}
@@ -20,6 +20,7 @@ function Portfolio() {
                 shortDescription={project.shortDescription}
                 longDescription={project.longDescription}
                 repo={project.repo}
+                index={index}
               />
             ))}
           </div>
