@@ -8,9 +8,9 @@
     /* font-family: "Montserrat"; */
   }
 
-  body:has(dialog.modal[open]) {
+  /* body:has(dialog.modal[open]) {
     overflow: hidden;
-  }
+  } */
 
   dialog.modal::backdrop {
     background-color: rgba(0, 0, 0, 0.65);
@@ -34,6 +34,16 @@
   .slide-in {
     filter: blur(5px);
     transform: translateX(-60%);
+  }
+
+   .slide-in-right {
+    filter: blur(5px);
+    transform: translateX(60%);
+  }
+
+   .scale-up {
+    /* filter: blur(5px); */
+    transform: scale(0.85);
   }
 
   .timeline-item:nth-child(1) {
@@ -107,6 +117,25 @@
 
   .shake {
     animation: shake 0.5s ease-in-out;
+  }
+
+  .delay-0 {
+    transition-delay: 200ms;
+  }
+  .delay-1 {
+    transition-delay: 350ms;
+  }
+  .delay-2 {
+    transition-delay: 500ms;
+  }
+  .delay-3 {
+    transition-delay: 650ms;
+  }
+  .delay-4 {
+    transition-delay: 800ms;
+  }
+  .delay-5 {
+    transition-delay: 950ms;
   }
 
   .modal[open] {
