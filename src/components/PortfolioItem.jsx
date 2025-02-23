@@ -9,10 +9,11 @@ function PortfolioItem({
   shortDescription,
   longDescription,
   repo,
-  index
+  index,
 }) {
   const buttonRef = useRef(null);
   const modalRef = useRef(null);
+  const itemRef = useRef(null);
 
   useEffect(() => {
     const handleEscape = (e) => {
@@ -23,6 +24,27 @@ function PortfolioItem({
     document.addEventListener("keydown", handleEscape);
     return () => document.removeEventListener("keydown", handleEscape);
   });
+
+  const handleMouseMove = (e) => {
+    if (!itemRef.current) return;
+
+    const rect = itemRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    itemRef.current.style.setProperty("--x", `${x}px`);
+    itemRef.current.style.setProperty("--y", `${y}px`);
+  };
+
+  const handleMouseEnter = () => {
+    if (!itemRef.current) return;
+    itemRef.current.classList.add("glow-active");
+  };
+
+  const handleMouseLeave = () => {
+    if (!itemRef.current) return;
+    itemRef.current.classList.remove("glow-active");
+  };
 
   const openModal = () => {
     const modal = modalRef.current;
@@ -56,11 +78,19 @@ function PortfolioItem({
   };
 
   return (
-    <div className="portfolio-item-wrapper grid drop-shadow-lg dark:drop-shadow-lg">
+    <div className="portfolio-item-wrapper grid drop-shadow-lg dark:drop-shadow-lg ">
       <div
-        className={`flex flex-col min-h-[450px] border-2 dark:border-zinc-500 rounded-md overflow-hidden portfolio-item hide ${
-          index % 2 === 0 ? 'slide-in' : 'slide-in-right'
+        ref={itemRef}
+        onMouseMove={handleMouseMove}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className={`flex flex-col min-h-[450px] border-2 dark:border-zinc-500 rounded-md overflow-hidden portfolio-item hide FeatureCard relative bg-gradient-to-br from-gray-200 to-gray-100 dark:from-zinc-800 dark:to-zinc-900 p-3 font-display shadow-sm before:absolute before:inset-0 before:content-[''] before:opacity-0 before:transition-all before:duration-300 before:pointer-events-none glow-effect ${
+          index % 2 === 0 ? "slide-in" : "slide-in-right"
         } delay-${index}`}
+        style={{
+          "--x": "0px",
+          "--y": "0px"
+        }}
       >
         {imgUrl !== "" ? (
           <div>
@@ -121,7 +151,7 @@ function PortfolioItem({
             <div>
               <dialog
                 ref={modalRef}
-                className="modal sm:text-lg w-11/12 sm:w-9/12 lg:w-6/12 2xl:w-4/12 p-5 rounded-md bg-white dark:bg-stone-900 transition-colors duration-700 ease-in-out text-stone-900 dark:text-stone-300 backdrop:bg-black backdrop:bg-opacity-50 "
+                className="modal sm:text-lg w-11/12 sm:w-9/12 lg:w-6/12 2xl:w-4/12 p-5 rounded-md bg-gradient-to-br from-gray-200 to-gray-100 dark:from-zinc-800 dark:to-zinc-900 transition-colors duration-700 ease-in-out text-stone-900 dark:text-stone-300 backdrop:bg-black backdrop:bg-opacity-50 "
                 style={{
                   transform: "scale(0.9)",
                   opacity: 0,

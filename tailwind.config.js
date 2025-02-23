@@ -69,7 +69,8 @@ export default {
     'delay-2',
     'delay-3',
     'delay-4',
-    'delay-5'
+    'delay-5',
+    'glow-effect'
   ],
   plugins: [],
 }
