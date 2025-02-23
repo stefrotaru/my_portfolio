@@ -7,11 +7,11 @@ function AboutMe() {
   return (
     <div className="about-section flex flex-col justify-center my-32 hide">
       <Title>About me</Title>
-      <div className="hide md:grid md:grid-cols-3 md:gap-5">
+      <div className="hide xl:grid xl:grid-cols-3 xl:gap-5">
         <img
           src={data.img}
           alt="portrait"
-          className="h-44 md:h-auto rounded-full float-left mr-5 mb-2 col-span-1"
+          className="h-44 xl:h-auto rounded-full float-left mr-5 mb-2 col-span-1"
         />
         <div className="col-span-2 text-xs md:text-base">
           <p className="font-normal text-stone-500 dark:text-zinc-400 text-justify">
