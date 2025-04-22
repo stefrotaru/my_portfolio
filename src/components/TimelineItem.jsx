@@ -10,35 +10,44 @@ function TimelineItem({
 }) {
   const calculateWorkTime = (start, end) => {
     const startDate = new Date(start);
-    let endDate = new Date(end);
-    let years = 0;
-    let months = 0;
-
-    if (end === "Present") {
-      endDate = new Date();
-    }
-
-    const diff = Math.floor(startDate.getTime() - endDate.getTime());
-    const day = 1000 * 60 * 60 * 24;
-    const dayOfTheMonth = endDate.getDate();
-    const days = Math.abs(Math.floor(diff / day));
+    let endDate = end === "Present" ? new Date() : new Date(end);
     
-    if (dayOfTheMonth <= 15 && end === "Present") {
-      months = Math.abs(Math.floor(days / 31));
-    } else {
-      months = Math.abs(Math.floor(days / 31)) + 1; // add 1 to months to account for 0 indexing
+    if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
+      return "Invalid date format";
     }
-
-    if (months > 12) {
-      years = Math.floor(months / 12);
-      months = (months % 12) + 1;
-
-      return `${years} ${years === 1 ? "year" : "years"}, ${months} months`;
+    
+    if (startDate > endDate) {
+      return "Start date cannot be after end date";
+    }
+    
+    const diff = endDate.getTime() - startDate.getTime(); //calculates difference in milliseconds
+    
+    const day = 1000 * 60 * 60 * 24;
+    const days = Math.floor(diff / day);
+    
+    let totalMonths;
+    if (end === "Present" && endDate.getDate() <= 15) {
+      totalMonths = Math.floor(days / 30.44); //average days in a month (365.25/12)
     } else {
-      if (end === "Present") {
-        return months + " months & counting";
+      totalMonths = Math.floor(days / 30.44) + 1; //count partial months
+    }
+    
+    const years = Math.floor(totalMonths / 12);
+    const months = totalMonths % 12;
+    
+    if (years > 0) {
+      const yearText = years === 1 ? "year" : "years";
+      if (months > 0) {
+        const monthText = months === 1 ? "month" : "months";
+        return `${years} ${yearText}, ${months} ${monthText}`;
+      } else {
+        return `${years} ${yearText}`;
       }
-      return months + " months";
+    } else {
+      const monthText = totalMonths === 1 ? "month" : "months";
+      return end === "Present" ? 
+        `${totalMonths} ${monthText} & counting` : 
+        `${totalMonths} ${monthText}`;
     }
   };
 
