@@ -1,28 +1,60 @@
 export default [
+    // {
+    //     title: 'Front End Developer Portfolio',
+    //     imgUrl: './front-end-dev-portfolio-preview.webp',
+    //     stack: ['HTML', 'CSS','React.js','Vite' ,'Tailwind', 'Firebase'],
+    //     link: 'https://stefanrotaru.eu/',
+    //     shortDescription: 'My very first personal Portfolio Website.',
+    //     longDescription: {
+    //         title: 'Front End Developer Portfolio',
+    //         content: [
+    //             'This is my very first personal Portfolio Website which is hosted on my own domain (https://stefanrotaru.eu/).',
+    //             'This project is built with React.js and Tailwind CSS. It is bundled with Vite and hosted on Firebase.',
+    //             'My goals with this project were to:',
+    //             [
+    //                 '- Build a website that is easy to maintain and update;',
+    //                 '- Connect a domain (my very own) to Firebase and configure SSL/TLS;',
+    //                 '- Get used with the Tailwind CSS framework;',
+    //                 '- Get used with the Firebase hosting service;',
+    //                 '- Get a great Google Lighthouse score;'
+    //             ],
+    //             'The website is fully responsive and it is optimized for mobile devices.',
+    //             'I\'m very happy with the result and I\'m constantly adding more content to my Portfolio Website, such as new projects and new features.'
+    //         ]
+    //     },
+    //     repo: 'https://github.com/stefrotaru/my_portfolio'
+    // },
     {
-        title: 'Front End Developer Portfolio',
-        imgUrl: './front-end-dev-portfolio-preview.webp',
-        stack: ['HTML', 'CSS','React.js','Vite' ,'Tailwind', 'Firebase'],
-        link: 'https://stefanrotaru.eu/',
-        shortDescription: 'My very first personal Portfolio Website.',
+        title: 'Collaborative Shopping List',
+        imgUrl: './collaborative-shopping-list-app_2.webp',
+        stack: ['C#', '.NET', 'Entity Framework Core', 'SignalR', 'SQL', 'Vue 3', 'Primevue', 'Pinia', 'Sass', 'Vite'],
+        link: 'https://github.com/stefrotaru/collaborative-shopping-list',
+        shortDescription: 'Create your own account and join collaborative groups to manage shared lists with instant updates in real-time.',
         longDescription: {
-            title: 'Front End Developer Portfolio',
+            title: 'Collaborative Shopping List',
             content: [
-                'This is my very first personal Portfolio Website which is hosted on my own domain (https://stefanrotaru.eu/).',
-                'This project is built with React.js and Tailwind CSS. It is bundled with Vite and hosted on Firebase.',
-                'My goals with this project were to:',
+                'A collaborative shopping list web application that enables users to create personal accounts and join groups for shared list management.',
+                'The frontend uses Primevue custom components to provide real-time features including user authentication, group administration, and synchronized list editing. Services such as the notification service provides real-time updates to users when a list is modified.',
+                'The backend is built with .NET Core and Entity Framework Core, utilizing a SQL database for data persistence. The backend controllers handle data persistence for users, groups, memberships, and shopping lists, ensuring seamless collaboration across the platform. A SignalR Hub manages client connections and broadcasts events.',
+                'Through strategic database joins, the backend system generates account statistics that track user engagement metrics, including group membership counts, list distribution across groups, and item completion status.',
+                'Some of my goals with this project were to:',
                 [
-                    '- Build a website that is easy to maintain and update;',
-                    '- Connect a domain (my very own) to Firebase and configure SSL/TLS;',
-                    '- Get used with the Tailwind CSS framework;',
-                    '- Get used with the Firebase hosting service;',
-                    '- Get a great Google Lighthouse score;'
+                    '- Gain experience with .NET Entity Framework Core and C# best practices;',
+                    '- Develop proficiency with SQL database technologies;',
+                    '- Explore Pinia state management with Vue 3;',
+                    '- Utilize a Vue components library (Primevue) for frontend development;',
+                    '- Ensure data persistence across users, groups, memberships, and shopping lists;',
+                    '- Implement real-time synchronized list editing and notifications using SignalR;'
                 ],
-                'The website is fully responsive and it is optimized for mobile devices.',
-                'I\'m very happy with the result and I\'m constantly adding more content to my Portfolio Website, such as new projects and new features.'
+                'I\'m very happy with the result and I will use this platform in the future to explore other cool technologies, such as IndexedDB API.'
+            ],
+            gallery: [
+                './collaborative-shopping-list-app_1.webp',	
+                './collaborative-shopping-list-app_2.webp',	
+                './collaborative-shopping-list-app_3.webp'
             ]
         },
-        repo: 'https://github.com/stefrotaru/my_portfolio'
+        repo: 'https://github.com/stefrotaru/collaborative-shopping-list'
     },
     {
         title: 'Mqtt chat client',
