@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useRef, useEffect } from "react";
+import MinimalistCarousel from "./MinimalistCarousel";
 
 function PortfolioItem({
   title,
@@ -151,7 +152,7 @@ function PortfolioItem({
             <div>
               <dialog
                 ref={modalRef}
-                className="modal sm:text-lg w-11/12 sm:w-9/12 lg:w-6/12 2xl:w-4/12 p-5 rounded-md bg-gradient-to-br from-gray-200 to-gray-100 dark:from-zinc-800 dark:to-zinc-900 transition-colors duration-700 ease-in-out text-stone-900 dark:text-stone-300 backdrop:bg-black backdrop:bg-opacity-50 "
+                className="modal sm:text-lg w-11/12 sm:w-9/12 lg:w-6/12 2xl:w-6/12 p-5 rounded-md bg-gradient-to-br from-gray-200 to-gray-100 dark:from-zinc-800 dark:to-zinc-900 transition-colors duration-700 ease-in-out text-stone-900 dark:text-stone-300 backdrop:bg-black backdrop:bg-opacity-50 "
                 style={{
                   transform: "scale(0.9)",
                   opacity: 0,
@@ -168,6 +169,13 @@ function PortfolioItem({
                   <h1 className="text-xl font-bold pb-2 pt-1 w-4/5">
                     {longDescription.title}
                   </h1>
+
+                  {longDescription.gallery && (
+                    <div className="mt-4">
+                      <MinimalistCarousel images={longDescription.gallery} />
+                    </div>
+                  )}
+
                   {longDescription.content.map((line, i) => {
                     if (typeof line === "string") {
                       return <p key={i}>{line}</p>;
