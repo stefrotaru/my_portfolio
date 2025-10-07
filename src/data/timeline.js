@@ -4,7 +4,7 @@ export default [
         title: 'Front End Developer',
         company: 'iFACTS Development',
         duration: {
-            start: 'April 2024',
+            start: 'April 1, 2024',
             end: 'Present'
         },
         details: 'Maintaining and modernizing the iFACTS web application, focusing on feature development, component migration, and codebase improvements.',
@@ -20,8 +20,8 @@ export default [
         title: 'Front End Developer',
         company: 'Verifone (2checkout)',
         duration: {
-            start: 'September 2022',
-            end: 'April 2024'
+            start: 'September 1, 2022',
+            end: 'April 1, 2024'
         },
         details: 'Maintaining and developing marketplaces and new versions of the 2Checkout cart.',
         detailsList: [
@@ -37,8 +37,8 @@ export default [
         title: 'Front End Intern',
         company: 'Verifone (2checkout)',
         duration: {
-            start: 'June 2022',
-            end: 'September 2022'
+            start: 'June 1, 2022',
+            end: 'September 1, 2022'
         },
         details: 'Studying the 2Checkout legacy code base and the tech stack used for building it. Through these 3 months as an intern I: ',
         detailsList: [
