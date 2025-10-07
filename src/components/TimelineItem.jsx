@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+import calculateWorkTime from "../utils/utils";
 
 function TimelineItem({
   year,
@@ -8,49 +9,6 @@ function TimelineItem({
   details,
   detailsList,
 }) {
-  const calculateWorkTime = (start, end) => {
-    const startDate = new Date(start);
-    let endDate = end === "Present" ? new Date() : new Date(end);
-    
-    if (isNaN(startDate.getTime()) || isNaN(endDate.getTime())) {
-      return "Invalid date format";
-    }
-    
-    if (startDate > endDate) {
-      return "Start date cannot be after end date";
-    }
-    
-    const diff = endDate.getTime() - startDate.getTime(); //calculates difference in milliseconds
-    
-    const day = 1000 * 60 * 60 * 24;
-    const days = Math.floor(diff / day);
-    
-    let totalMonths;
-    if (end === "Present" && endDate.getDate() <= 15) {
-      totalMonths = Math.floor(days / 30.44); //average days in a month (365.25/12)
-    } else {
-      totalMonths = Math.floor(days / 30.44) + 1; //count partial months
-    }
-    
-    const years = Math.floor(totalMonths / 12);
-    const months = totalMonths % 12;
-    
-    if (years > 0) {
-      const yearText = years === 1 ? "year" : "years";
-      if (months > 0) {
-        const monthText = months === 1 ? "month" : "months";
-        return `${years} ${yearText}, ${months} ${monthText}`;
-      } else {
-        return `${years} ${yearText}`;
-      }
-    } else {
-      const monthText = totalMonths === 1 ? "month" : "months";
-      return end === "Present" ? 
-        `${totalMonths} ${monthText} & counting` : 
-        `${totalMonths} ${monthText}`;
-    }
-  };
-
   return (
     <li className="flex flex-col md:flex-row relative border-1 border-stone-200 dark:border-stone-700 timeline-item hide slide-in">
       <div className="mb-10 ml-4">
